@@ -1,0 +1,123 @@
+:root {
+    --text-color:#f0f4f5;
+    --background-color:#ffeaa7;
+    --nav-background-color : #263343;
+    --accent-color: #ffeaa7;
+    
+}
+
+body {
+    margin : 0;
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity : 0;
+    } to {
+        opacity: 1;
+    }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items :center;
+    background-color : var(--nav-background-color);
+    padding : 8px 12px;
+
+}
+
+.navbar__logo {
+    font-size: 25px;
+    color : var(--text-color);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.navbar__logo i {
+    font-size: 35px;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.navbar__menu {
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding : 8px 12px;
+}
+
+.navbar__menu li:hover {
+    background-color: #b2bec3;
+    border-radius: 4px;
+}
+.navbar__icons {
+    display: flex;
+    list-style : none;
+    padding-left: 0;
+}
+
+.navbar__icons i {
+    font-size: 20px;
+    color :var(--accent-color);
+    cursor: pointer;
+}
+
+.navbar__icons li {
+    padding : 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+        /* align-items를 통해 반대되는 수직선을 만들어줌 */
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar__menu li {
+        width : 100%;
+        text-align:center;
+        /* width가 넓어지면 text는 자동으로 왼쪽으로 정렬되기 때문에 center로 지정해준다. */
+    }
+
+    .navbar__icons {
+        justify-content: center;
+        width: 100%;
+        display: none;
+
+    }
+
+    /* position : absolute 는 원래 문서의 흐름에서 나와서 붙여주는 방식 */
+    .navbar__toggleBtn {
+        display : block;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+    }
+
+    .navbar__icons.active,
+    .navbar__menu.active {
+        display: flex;
+    }
+}
