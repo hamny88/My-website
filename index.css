@@ -6,10 +6,12 @@
     --old-green : #66FF66;
     
 }
-
 body {
+    cursor: none;
     margin : 0;
     background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
 }
 
 a {
@@ -24,7 +26,50 @@ a {
         opacity: 1;
     }
 }
+.nonecursor{
+    cursor: none;
+}
+.cursor {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 3px solid #65e2d9;
+    transition: all 0.7s ease;
+}
+/* style for the bounce effect */
+.bounce::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    border: 5px solid hsla(176, 68%, 64%, 0.525);
+    animation: flow 1.4s ease infinite;
+}
+.inactive {
+    margin-top: 40px;
+    width: 10px;
+    height: 10px;
+    transition: all 0.7s ease;
+}
+@keyframes flow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+        border-color: hsl(198, 60%, 50%);
+    }
+    100% {
+        transform : scale(1);
 
+    }
+}
 .NAYOUN {
     font-family: 'East Sea Dokdo', cursive;
     font-size: 33px;
@@ -75,7 +120,7 @@ a {
 .navbar__icons i {
     font-size: 20px;
     color :var(--accent-color);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .navbar__icons li {
