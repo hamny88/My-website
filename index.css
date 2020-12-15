@@ -1,8 +1,9 @@
 :root {
     --text-color:#f0f4f5;
-    --background-color:#ffeaa7;
+    --background-color:rgb(24, 24,24);
     --nav-background-color : #263343;
-    --accent-color: #ffeaa7;
+    --accent-color: #F4F3EF;
+    --old-green : #66FF66;
     
 }
 
@@ -23,6 +24,12 @@ a {
         opacity: 1;
     }
 }
+
+.NAYOUN {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 33px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +42,6 @@ a {
 .navbar__logo {
     font-size: 25px;
     color : var(--text-color);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .navbar__logo i {
@@ -53,7 +59,7 @@ a {
 }
 
 .navbar__menu li {
-    padding : 8px 12px;
+    padding : 8px 30px;
 }
 
 .navbar__menu li:hover {
@@ -78,6 +84,23 @@ a {
 
 .navbar__toggleBtn {
     display: none;
+}
+
+.typed-cursor {
+    font-size : 20px;
+    color: var(--old-green);
+}
+#typed {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 24px;
+    line-height: 121%;
+    color : var(--old-green);
+    /* display: flex; */
+}
+.type-box {
+    /* display: flex; */
+    align-items: center;
+    padding: 56px 74px;
 }
 @media screen and (max-width: 768px) {
     
