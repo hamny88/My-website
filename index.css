@@ -81,7 +81,16 @@ a {
     height: 10px;
     transition: all 0.7s ease;
 }
-
+.first-carousel {
+    position: relative;
+    height: 90vh;
+}
+.advice-box {
+    position: absolute;
+    bottom: 11%;
+    text-align: center;
+    width: 100%;
+}
 @keyframes flow {
     0% {
         transform: scale(1);
@@ -170,7 +179,8 @@ a {
     color: var(--old-green);
 }
 #typed {
-    font-family: 'Nanum Gothic Coding', monospace;
+    /* font-family: 'Nanum Gothic Coding', monospace; */
+    font-family: 'Bungee Outline', cursive;
     font-size: 24px;
     line-height: 121%;
     color : var(--old-green);
@@ -181,6 +191,13 @@ a {
     align-items: center;
     padding: 56px 74px;
 }
+
+.advice{
+    color: var(--old-green);
+    font-family: 'Jura', sans-serif;
+
+}
+
 @media screen and (max-width: 768px) {
     
     .navbar {

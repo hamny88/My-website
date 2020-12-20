@@ -1,6 +1,7 @@
 const toggle = document.querySelector(".navbar__toggleBtn"),
     navbar__menu = document.querySelector(".navbar__menu"),
     navbar__icons = document.querySelector(".navbar__icons")
+    advice__box = document.querySelector(".advice-box")
     ;
     const cursor = document.querySelector(".cursor");
     const links = document.querySelectorAll("a");
@@ -38,15 +39,56 @@ function greeting() {
 //     }
 // }
 
+function slick() {
+    const slider = $(".vertical-slider");
+    slider.slick({
+      dots: true,
+          vertical: true,
+          arrows: false,
+          verticalSwiping: true,
+          swipe:true,
+          draggable : true,
+          infinite: false,
+    });
 
+    slider.on('wheel', (function(e) {
+        e.preventDefault();
+    
+        if(e.originalEvent.deltaY > 0) {
+          $(this).slick('slickNext');
+        } else {
+          $(this).slick('slickPrev');
+        }
+      }));
+}
+
+function callAdvice() {
+    console.log("callAdvice")
+    fetch(`https://api.adviceslip.com/advice`).then(function(response){
+        return response.json();
+    })
+    .then(function(json){
+        console.log(json.slip.advice)
+        const advice = json.slip.advice;
+        const span_advice = document.createElement("span");
+        span_advice.innerText = advice;
+        advice__box.appendChild(span_advice);
+        span_advice.classList.add("advice");
+    })
+    ;
+}
 
 function init() {
+    callAdvice();
+    slick();
    // document.addEventListener("mousemove",moveMouse);
     // links.forEach(link => link.addEventListener("mouseover", disableAnimation));
     // links.forEach(link => link.addEventListener("mouseleave", disableAnimation));
     toggle.addEventListener("click",handleClickEvent);
     greeting();
+    
 }
 
+  
 init();
 
