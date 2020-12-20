@@ -1,13 +1,20 @@
 const toggle = document.querySelector(".navbar__toggleBtn"),
     navbar__menu = document.querySelector(".navbar__menu"),
     navbar__icons = document.querySelector(".navbar__icons")
-    advice__box = document.querySelector(".advice-box")
+    advice__box = document.querySelector(".advice-box"),
+    name__form = document.querySelector(".name-form"),
+    nameInput = document.querySelector(".nameInput"),
+    form = document.querySelector(".name-form")
     ;
-    const cursor = document.querySelector(".cursor");
-    const links = document.querySelectorAll("a");
-    const bounce = "bounce";
-    const inactive = "inactive";
-    const ACTIVE = "active";
+
+    const cursor = document.querySelector(".cursor"),
+     type__cursor = document.querySelector(".typed-cursor"),
+     links = document.querySelectorAll("a"),
+     bounce = "bounce",
+     inactive = "inactive",
+     ACTIVE = "active",
+     SHOWING = "showing"
+     ;
 
 function handleClickEvent(event) {
     console.log("toggle clicks")
@@ -15,11 +22,41 @@ function handleClickEvent(event) {
     navbar__icons.classList.toggle(ACTIVE);
 }
 
+
+function printName(currentValue) {
+    var typed2 = new Typed('#typed2', {
+        strings: [`Welcome ${currentValue}`, 'Feel free to browse', '👋👋👋👋👋👋👋'],
+        typeSpeed: 20,
+        backSpeed: 20,
+        fadeOut: true,
+        loop: false
+      });
+}
+
+function handleSubmit(event) {
+    console.log("input")
+    event.preventDefault();
+    const currentValue = nameInput.value;
+    if(currentValue !== "") {
+        console.log(currentValue)
+        nameInput.value = "";
+        name__form.classList.remove("showing");
+        printName(currentValue);
+        name__form.classList.add("fadeOut");
+    }
+}
+
+
 function greeting() {
     var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
-        typeSpeed : 35
+        typeSpeed : 35,
+        onComplete: function(self) { self.cursor.remove();
+            name__form.classList.add(SHOWING);
+            form.addEventListener("submit",handleSubmit);
+        }
       });
+
 }
 
 // function moveMouse(e) {
@@ -88,6 +125,7 @@ function init() {
     greeting();
     
 }
+
 
   
 init();
