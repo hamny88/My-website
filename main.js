@@ -6,6 +6,7 @@ const toggle = document.querySelector(".navbar__toggleBtn"),
     const links = document.querySelectorAll("a");
     const bounce = "bounce";
     const inactive = "inactive";
+    const ACTIVE = "active";
 
 function handleClickEvent(event) {
     console.log("toggle clicks")
@@ -36,6 +37,9 @@ function disableAnimation() {
         cursor.classList.reomove(inactive);
     }
 }
+
+
+
 function init() {
     document.addEventListener("mousemove",moveMouse);
     // links.forEach(link => link.addEventListener("mouseover", disableAnimation));
@@ -45,3 +49,4 @@ function init() {
 }
 
 init();
+

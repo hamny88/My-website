@@ -6,8 +6,9 @@
     --old-green : #66FF66;
     
 }
+
 body {
-    cursor: none;
+    /* cursor: none; */
     margin : 0;
     background-color: var(--background-color);
     width: 100vw;
@@ -26,7 +27,31 @@ a {
         opacity: 1;
     }
 }
-.nonecursor{
+
+.slick-vertical .slick-slide {
+    height: 100vh !important;
+}
+.slick-dots {
+    right: 0%;
+    top: 35% !important;
+    position: absolute;
+    width: 2% !important;
+    height: 10% !important;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-right: 35px !important;
+    flex-direction: column;
+    text-align: center;
+    display: flex !important;
+}
+.slick-dots li button:before {
+    color: white !important;
+}
+/* .slick-list {
+    height: 722.4px !important;
+} */
+/* .nonecursor{
     cursor: none;
 }
 .cursor {
@@ -39,7 +64,6 @@ a {
     border: 3px solid #65e2d9;
     transition: all 0.7s ease;
 }
-/* style for the bounce effect */
 .bounce::after {
     content: "";
     width: 21px;
@@ -50,13 +74,14 @@ a {
     position: absolute;
     border: 5px solid hsla(176, 68%, 64%, 0.525);
     animation: flow 1.4s ease infinite;
-}
+} */
 .inactive {
     margin-top: 40px;
     width: 10px;
     height: 10px;
     transition: all 0.7s ease;
 }
+
 @keyframes flow {
     0% {
         transform: scale(1);
@@ -112,15 +137,24 @@ a {
     border-radius: 4px;
 }
 .navbar__icons {
-    display: flex;
+    /* display: flex;
     list-style : none;
     padding-left: 0;
+    justify-content: space-between;
+    align-items: center; */
+    position: absolute;
+    right: 2%;
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__icons i {
+    margin-left: 14px;
     font-size: 20px;
     color :var(--accent-color);
-    /* cursor: pointer; */
 }
 
 .navbar__icons li {
@@ -173,9 +207,11 @@ a {
         justify-content: center;
         width: 100%;
         display: none;
-
+        position: inherit;
     }
-
+    .navbar__icons li {
+        margin-left: -17px;
+    }
     /* position : absolute 는 원래 문서의 흐름에서 나와서 붙여주는 방식 */
     .navbar__toggleBtn {
         display : block;

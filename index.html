@@ -1,18 +1,24 @@
 <!doctype html>
 <html>
   <head>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script> -->
     <script src="https://kit.fontawesome.com/e5a9eb1b11.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer ></script>
       <link rel="stylesheet" href="index.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
       <title>Responsive Web</title>
   </head>
   <body>
     <!-- cursor element -->
-    <div class="cursor bounce"></div>
+    <!-- <div class="cursor bounce"></div> -->
     <!--  -->
       <nav class="navbar">
           <div class="navbar__logo">
@@ -31,27 +37,59 @@
           <ul class="navbar__icons">
             <li>
               <a href="https://www.instagram.com/" target="_blank">
-                <i class="fab fa-instagram"></i></a>
+                <i class="fab fa-github"></i>
             
             </li>
-            <li><i class="fab fa-facebook-square"></i></li>
+            <i class="fab fa-linkedin"></i>
           </ul>
 
           <a href="#" class="navbar__toggleBtn">
             <i class="fas fa-bars"></i>
           </a>
       </nav>
-
-      <div class="type-box">
-      <div id="typed-strings" class="type">
-        <p>Hello world!<br>
-        I'm Ellie, Software Engineer<br>
-        residing in Seoul,South Korea. 
-        </p>
-      </div>
-      <span id="typed"></span>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer></script>
-    <script src="main.js" defer></script>
+      <section class="vertical-slider">
+          <div class="first-carousel">
+            <div class="type-box">
+              <div id="typed-strings" class="type">
+                <p>Hello world!<br>
+                I'm Ellie, Software Engineer<br>
+                residing in Seoul,South Korea. 
+                </p>
+              </div>
+              <span id="typed"></span>
+            </div>
+          </div>
+    
+          <div class="second-carousel">
+            <h2 style="color:white;">Second Carousel</h2>
+          </div>
+        
+      </section>
+   
+     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+     <script src="/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+     
   </body>
+  <script src="main.js" defer></script>
+
+  <script type="text/javascript">
+  const slider = $(".vertical-slider");
+  slider.slick({
+    dots: true,
+        vertical: true,
+        arrows: false,
+        verticalSwiping: true,
+        swipe:true,
+        draggable : true,
+  });
+  slider.on('wheel', (function(e) {
+    e.preventDefault();
+
+    if(e.originalEvent.deltaY > 0) {
+      $(this).slick('slickNext');
+    } else {
+      $(this).slick('slickPrev');
+    }
+  }));
+    </script>
 </html>
