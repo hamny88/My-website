@@ -84,13 +84,14 @@ function greeting() {
 function slick() {
     const slider = $(".vertical-slider");
     slider.slick({
-      dots: true,
-          vertical: true,
-          arrows: false,
-          verticalSwiping: true,
-          swipe:true,
-          draggable : true,
-          infinite: false,
+        dots: true,
+        vertical: true,
+        arrows: false,
+        verticalSwiping: true,
+        swipe:true,
+        draggable : true,
+        infinite: false,
+       
     });
 
     slider.on('wheel', (function(e) {

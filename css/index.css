@@ -20,6 +20,8 @@ a {
     /* color: var(--text-color); */
 }
 
+
+
 @keyframes fadeIn {
     from{
         opacity : 0;
