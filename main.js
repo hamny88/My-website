@@ -4,11 +4,10 @@ const toggle = document.querySelector(".navbar__toggleBtn"),
     advice__box = document.querySelector(".advice-box"),
     name__form = document.querySelector(".name-form"),
     nameInput = document.querySelector(".nameInput"),
-    form = document.querySelector(".name-form")
+    form = document.querySelector(".name-form"),
+    icons = document.querySelector(".icons")
     ;
 
-    const cursor = document.querySelector(".cursor"),
-     type__cursor = document.querySelector(".typed-cursor"),
      links = document.querySelectorAll("a"),
      bounce = "bounce",
      inactive = "inactive",
@@ -24,12 +23,17 @@ function handleClickEvent(event) {
 
 
 function printName(currentValue) {
+
     var typed2 = new Typed('#typed2', {
         strings: [`Welcome ${currentValue}`, 'Feel free to browse', '👋👋👋👋👋👋👋'],
         typeSpeed: 20,
         backSpeed: 20,
         fadeOut: true,
-        loop: false
+        loop: false,
+        onComplete : function(){
+            icons.classList.remove("none");
+            icons.classList.add(SHOWING);
+        }
       });
 }
 
@@ -54,6 +58,7 @@ function greeting() {
         onComplete: function(self) { self.cursor.remove();
             name__form.classList.add(SHOWING);
             form.addEventListener("submit",handleSubmit);
+            
         }
       });
 
@@ -116,12 +121,13 @@ function callAdvice() {
 }
 
 function init() {
+    icons.classList.add("none");
     callAdvice();
     slick();
    // document.addEventListener("mousemove",moveMouse);
     // links.forEach(link => link.addEventListener("mouseover", disableAnimation));
     // links.forEach(link => link.addEventListener("mouseleave", disableAnimation));
-    toggle.addEventListener("click",handleClickEvent);
+  //  toggle.addEventListener("click",handleClickEvent);
     greeting();
     
 }

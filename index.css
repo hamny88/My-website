@@ -17,7 +17,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--text-color);
+    /* color: var(--text-color); */
 }
 
 @keyframes fadeIn {
@@ -67,8 +67,9 @@ a {
 }
 
 .none {
-    display: none;
+    display: none !important;
 }
+
 
 .fadeOut {
     -webkit-animation-name: fadeOut;
@@ -76,9 +77,10 @@ a {
 }
 
 .showing {
-    display: block;
+    display: flex !important;
     animation: fadeIn 2s ease;
 }
+
 
 .name{
     display: none;
@@ -156,10 +158,11 @@ input:focus::placeholder {
 }
 .advice-box {
     position: absolute;
-    bottom: 11%;
+    bottom: 0;
     text-align: center;
     width: 100%;
 }
+
 @keyframes flow {
     0% {
         transform: scale(1);
@@ -248,6 +251,11 @@ input:focus::placeholder {
     font-size : 20px;
     color: var(--old-green);
 }
+
+.amber {
+    color: var(--old-amber);
+}
+
 #typed,#typed-name,#typed2 {
     line-height: 128%;
     font-family: 'Bungee Outline', cursive;
@@ -267,12 +275,39 @@ input:focus::placeholder {
 .type-box {
     /* display: flex; */
     align-items: center;
-    padding: 56px 74px;
+    padding: 100px 0px 20px 74px; 
+    /* top right left bottom */
 }
 
 .advice{
     color: var(--old-green);
     font-family: 'Jura', sans-serif;
+
+}
+
+.icons {
+    font-size: 24px;
+    flex-direction: column;
+    display: flex;
+    padding-left: 74px;
+}
+
+.icon-link {
+    width: fit-content;
+}
+
+.icon-link:hover {
+    text-decoration: underline;
+    color: var(--old-amber);
+    text-underline-offset: 0.2em;
+    font-style: italic;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.icon__github, .icon__linkedin {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--old-amber) !important;
 
 }
 

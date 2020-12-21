@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
   <head>
-    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous" defer></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script> -->
     <script src="https://kit.fontawesome.com/e5a9eb1b11.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" defer ></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script>
       <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="aboutme.css">
       <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
@@ -25,6 +25,7 @@ $("#ABOUT-carousel").load("about-carousel.html");
 $("#SKILLS-carousel").load("skills-carousel.html");
 $("#PROJECTS-carousel").load("projects-carousel.html");
 $("#CONTACT-carousel").load("contact-carousel.html");
+$("#soundcloud").load("soundcloud.html");
 
 });
 </script>
@@ -35,13 +36,12 @@ $("#CONTACT-carousel").load("contact-carousel.html");
     <!-- cursor element -->
     <!-- <div class="cursor bounce"></div> -->
     <!--  -->
-      <nav class="navbar">
+      <!-- <nav class="navbar">
           <div class="navbar__logo">
             <a href="" class="NAYOUN">NAYOUN</a>
         </div>
 
           <ul class="navbar__menu">
-            <!-- (li>a)*5 -->
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Skills</a></li>
@@ -61,14 +61,15 @@ $("#CONTACT-carousel").load("contact-carousel.html");
           <a href="#" class="navbar__toggleBtn">
             <i class="fas fa-bars"></i>
           </a>
-      </nav>
+      </nav> -->
       <section class="vertical-slider">
           <div class="first-carousel">
+            <!-- <div id="soundcloud"></div> -->
             <div class="type-box">
 
               <div id="typed-strings" class="type">
                 <p>Hello world!<br>
-                I'm Ellie, Software Engineer<br>
+                I'm Ellie, Software Engineer.<br>
                 residing in Seoul,South Korea.<br><br>
                 What's your name? 
                 </p>
@@ -83,6 +84,19 @@ $("#CONTACT-carousel").load("contact-carousel.html");
                 <span id="typed2"></span>
               </div>
               
+            </div>
+            <div class="icons">
+              <a class="icon-link" href="https://github.com/hamny88" target="_blank">
+              <span class="icon__github">> GITHUB
+                  <i class="fab fa-github"></i>
+              </span>
+              </a>
+               
+              <a class="icon-link" href="https://www.linkedin.com/in/nayoun-ellie-ham-6a3373179/" target="_blank">
+                <span class="icon__linkedin">> LINKEDIN
+                  <i class="fab fa-linkedin"></i>
+                </span>
+              </a>
             </div>
             <div class="advice-box"></div>
           </div>
@@ -104,8 +118,8 @@ $("#CONTACT-carousel").load("contact-carousel.html");
           </div>
       </section>
    
-
-
   </body>
+  <script src="soundcloud.js" defer></script>
   <script src="main.js" defer></script>
+  <script src="AboutMe.js" defer></script>
 </html>
