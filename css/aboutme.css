@@ -46,6 +46,18 @@
 
 }
 
+.resume {
+    font-family: 'Bungee Shade', cursive;
+    color: var(--old-amber) !important;
+}
+.resume:hover {
+    text-decoration: underline;
+    color: var(--old-amber);
+    text-underline-offset: 0.2em;
+    font-style: italic;
+    -webkit-tap-highlight-color: transparent;
+
+}
 .fa-linkedin {
     color: #0a66c2;
 }
