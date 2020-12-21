@@ -5,7 +5,8 @@ const toggle = document.querySelector(".navbar__toggleBtn"),
     name__form = document.querySelector(".name-form"),
     nameInput = document.querySelector(".nameInput"),
     form = document.querySelector(".name-form"),
-    icons = document.querySelector(".icons")
+    icons = document.querySelector(".icons"),
+    author = document.querySelector(".author")
     ;
 
      links = document.querySelectorAll("a"),
@@ -58,7 +59,6 @@ function greeting() {
         onComplete: function(self) { self.cursor.remove();
             name__form.classList.add(SHOWING);
             form.addEventListener("submit",handleSubmit);
-            
         }
       });
 
@@ -105,19 +105,6 @@ function slick() {
 }
 
 function callAdvice() {
-    // console.log("callAdvice")
-    // fetch(`https://api.adviceslip.com/advice`).then(function(response){
-    //     return response.json();
-    // })
-    // .then(function(json){
-    //     console.log(json.slip.advice)
-    //     const advice = json.slip.advice;
-    //     const span_advice = document.createElement("span");
-    //     span_advice.innerText = advice;
-    //     advice__box.appendChild(span_advice);
-    //     span_advice.classList.add("advice");
-    // })
-    // ;
     fetch("https://type.fit/api/quotes")
   .then(function(response) {
     return response.json();
@@ -127,10 +114,11 @@ function callAdvice() {
     const rand = Math.floor(Math.random() * Math.floor(1642));
 
     const advice = data[rand].text;
-        const span_advice = document.createElement("span");
-        span_advice.innerText = advice;
-        advice__box.appendChild(span_advice);
-        span_advice.classList.add("advice");
+    const advice_author = data[rand].author;
+    const span_advice = document.createElement("span");
+    span_advice.innerHTML = advice + '<br>-' +advice_author ;
+    advice__box.appendChild(span_advice);
+    span_advice.classList.add("advice");
   });
 }
 
