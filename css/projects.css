@@ -1,0 +1,15 @@
+.projects-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 74px;
+    display: block;
+}
+
+.projects {
+    font-size: 31px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    height: 18%;
+
+}
