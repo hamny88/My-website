@@ -8,7 +8,7 @@
       widget.bind(SC.Widget.Events.FINISH, function() {
         widget.load(newSoundUrl, {
           show_artwork: false,
-          show_teaser=false
+          show_teaser :false
         });
       });
     });

@@ -111,7 +111,7 @@ function callAdvice() {
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
+    // console.log(data);
     const rand = Math.floor(Math.random() * Math.floor(1642));
 
     const advice = data[rand].text;

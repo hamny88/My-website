@@ -1,17 +1,16 @@
 const html = document.querySelector(".excellent");
+const logo = document.querySelector(".div-html");
 console.log(html)
 const UP = "up";
 
 
 
-function htmlup() {
-    console.log("htmlup")
-    html.classList.add("pop");
+function htmlOver() {
+    html.classList.add("slideup");
     
 }
 function init() {
-    console.log("skills")
-    html.classList.add("none");
+    logo.addEventListener("mouseover",htmlOver);
 }
 
 init();

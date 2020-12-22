@@ -20,7 +20,7 @@ a {
     /* color: var(--text-color); */
 }
 
-
+a { color: inherit; } 
 
 @keyframes fadeIn {
     from{
@@ -94,29 +94,24 @@ a {
     border-bottom: 2px solid var(--old-green);
     padding: 7px 0;
     margin-top: 15px;
-}
-
-input { 
     color: var(--old-green);
+    font-size:20px;
+    font-family: 'Jura', sans-serif;
 }
 
-input:focus { 
+
+nameInput:focus { 
     outline: none; 
     color: var(--old-green);
 }
 
-input[type="text"]
-{
-    font-size:20px;
-    font-family: 'Jura', sans-serif;
-}
 
 ::placeholder {
     color: var(--old-green);
     opacity: 1; /* Firefox */
 }
 
-input:focus::placeholder {
+nameInput:focus::placeholder {
     color: transparent;
     transition: 0.5s;
   }

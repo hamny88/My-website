@@ -15,7 +15,7 @@ function typeName() {
 }
 
 function init() {
-    console.log("AboutMe")
+    // console.log("AboutMe")
     typeName();
 }
 

@@ -7,9 +7,10 @@
     
 
 }
-@keyframes up {
-    from {bottom: 0px;}
-    to {bottom: 5px;}
+
+@keyframes slideup {
+    0%{bottom:-50px}
+    100%{bottom:0;}
   }
 
 .pop {
@@ -52,19 +53,22 @@
     width: 100%;
     height: 20%;
 }
-.html5 {
-    margin-left: 5px;
-    display: flex;
-    width: 130px;
-    width: 56%;
-    padding-top: 5px;
+
+.div-html {
+    text-align: center;
 }
 
-.javascript {
-    width: 6%;
+.fa-html5 {
+    font-size: 60px;
+    color: orange;
 }
 
-.div-js {
-    margin-left: 22px;
-    margin-top: 3px;
+.div-css {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.fa-css3-alt {
+    font-size: 60px;
+    color: blue;
 }
