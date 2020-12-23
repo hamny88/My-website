@@ -45,6 +45,7 @@ a { color: inherit; }
 .slick-vertical .slick-slide {
     height: 100vh !important;
 }
+
 .slick-dots {
     right: 0%;
     top: 35% !important;
@@ -72,7 +73,6 @@ a { color: inherit; }
     display: none !important;
 }
 
-
 .fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
@@ -82,7 +82,6 @@ a { color: inherit; }
     display: flex !important;
     animation: fadeIn 2s ease;
 }
-
 
 .name{
     display: none;
@@ -99,14 +98,12 @@ a { color: inherit; }
     font-family: 'Jura', sans-serif;
 }
 
-
-nameInput:focus { 
+.nameInput:focus { 
     outline: none; 
     color: var(--old-green);
 }
 
-
-::placeholder {
+.nameInput::placeholder {
     color: var(--old-green);
     opacity: 1; /* Firefox */
 }
@@ -143,16 +140,19 @@ nameInput:focus::placeholder {
     border: 5px solid hsla(176, 68%, 64%, 0.525);
     animation: flow 1.4s ease infinite;
 } */
+
 .inactive {
     margin-top: 40px;
     width: 10px;
     height: 10px;
     transition: all 0.7s ease;
 }
+
 .first-carousel {
     position: relative;
     height: 100vh;
 }
+
 .advice-box {
     position: absolute;
     text-align: center;

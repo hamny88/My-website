@@ -19,6 +19,7 @@
       <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
       <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       <script src="https://kit.fontawesome.com/e5a9eb1b11.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"  ></script>
       <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
@@ -26,16 +27,7 @@
       <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
       <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
 
-      <script type="text/javascript">
-      $(document).ready( function() {
-      $("#ABOUT-carousel").load("about-carousel.html");
-      // $("#SKILLS-carousel").load("skills-carousel.html");
-      $("#PROJECTS-carousel").load("projects-carousel.html");
-      $("#CONTACT-carousel").load("contact-carousel.html");
-      $("#soundcloud").load("soundcloud.html");
-
-      });
-      </script>
+      
 
       <title>Responsive Web</title>
   </head>
@@ -127,14 +119,27 @@
             <div id="CONTACT-carousel"></div>
           </div>
       </section>
-      <script src="./src/soundcloud.js" ></script>
-      <script src="./src/main.js" ></script>
-      <script src="./src/AboutMe.js" ></script>
-      <!-- <script src="./src/skills.js" defer></script> -->
-      <script src="./src/contact.js" ></script>
-      <script src="./src/projects.js" ></script>
+
+    
 
   </body>
+  <script type="text/javascript">
+    $(document).ready( function() {
+    $("#ABOUT-carousel").load("about-carousel.html");
+    $("#PROJECTS-carousel").load("projects-carousel.html");
+    $("#CONTACT-carousel").load("contact-carousel.html");
+    $("#soundcloud").load("soundcloud.html");
+    });
+
+    $(window).load(function(){
+      $.getScript( "./src/main.js" )
+      $.getScript( "./src/soundcloud.js" )
+      $.getScript( "./src/AboutMe.js" )
+      $.getScript( "./src/projects.js" )
+      $.getScript( "./src/contact.js" )
+    });
+
+    </script>
 
 
 </html>

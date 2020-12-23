@@ -1,6 +1,7 @@
 .contact-carousel {
     background-image: url("/image/city.jpg");
     background-size: contain;
+    height: 100vh;
 }
 
 .contact-container {
@@ -21,11 +22,16 @@
 }
 
 .mail-form{
-    width: 50%;
-    height: 66%;
-   position: absolute;
+    position: absolute;
+    width: 49%;
+    margin-left: 17%;
+    height: 500px;
+    position: absolute;
     margin-top: 100px;
+    opacity: 0.84;
     border-radius: 8px;
+    background-color: rgb(22,23,28);
+    /* text-align: center; */
 }
 
 .form {
@@ -42,7 +48,80 @@
 }
 
 .mail-input {
-    border-radius: 8px;
+    border:0;
+    border-bottom:1px solid #555;  
+    background-color: transparent;
+    margin-left: 20px;
+    color : whitesmoke;
+    font-family: 'Open Sans', sans-serif;    
+
+}
+
+.mail-input:focus {
     border: none;
-    background-color: whitesmoke;
+    outline:none;
+    border-bottom:1px solid #e74c3c;	
+}
+
+.content-input {
+    background-color: transparent;
+    margin-left: 20px;
+    color: whitesmoke;
+    width: 90%;    height: 300px;
+    outline: none;
+    border: 2px solid #555;
+    resize: none;
+    font-family: 'Open Sans', sans-serif; 
+    margin-top: -14px; 
+}
+
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+
+.div-input label{
+    position: absolute;
+    left: 20px;
+    font-size: 16px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus::placeholder {
+    color: transparent;
+    transition: .5s ease;
+}
+
+.mail-input::placeholder {
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: '';
+}
+
+.content-input::placeholder {
+    color: whitesmoke;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+}
+
+.content-input:focus::placeholder {
+    color: transparent;
+    transition: .5s ease;
+}
+
+.submit-btn {
+    margin-left: 20px;
+    margin-right: 26px;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    margin-top: 11px;
+    height: 30px;
+    cursor: pointer;
+    width: 88px;
+}
+
+.swal-footer {
+    text-align: center !important;
 }

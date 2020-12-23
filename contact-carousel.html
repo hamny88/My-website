@@ -4,21 +4,33 @@
     <span class="contact">
         GET IN TOUCH
     </span>
-    <div class="mail-form">
-        <form>
-            <label for="who" class="form who">
-                Name:</label>
+    <div class="mail-form" >
+
+        <form autocomplete="off">
             <br>
-            <input type="text" name="name" class="mail-name mail-input">
+            <div class="div-input">
+                
+            <input type="text" placeholder="Name" id="username" class="username mail-input" autocomplete="off">
+            
+            </div>
+
             <br>
-            <label for="email" class="form email">
-                email:         
-            </label><br>
-            <input type="email" name="email" class="mail-input"><br>
-            <label for="content" class="form content">
-            content:</label><br>
-            <input type="text" name="content" class="mail-input">
+
+            <div class="div-input">
+            <input type="email" placeholder="Email" name="email" class="email mail-input" autocomplete="off">
+            </div>
+            <br>
+            
+            
+            <br>
+            
+            <div class="div-input">
+            <!-- <input type="text" name="content" > -->
+            <textarea placeholder="Content" class="content content-input " autocomplete="off" cols="50" rows="10"></textarea>
+            </div>
+
         </form>
+        <button class="submit-btn" onclick="Sendmail()" >Submit</button>
     </div>
     <!-- <div class="email" onclick="Sendmail()">Contact</div> -->
 </div>

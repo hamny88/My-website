@@ -124,7 +124,6 @@ function callAdvice() {
 }
 
 function init() {
-    icons.classList.add("none");
     callAdvice();
     slick();
    // document.addEventListener("mousemove",moveMouse);
@@ -135,6 +134,7 @@ function init() {
     
 }
 
+icons.classList.add("none");
 
   
 init();
