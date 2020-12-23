@@ -7,20 +7,20 @@ const BASIC = "dafault-bgc",
 
 
 function Dailydesk() {
-     projectCarousel.classList.add(DDESK);
+   //  projectCarousel.classList.add(DDESK);
 
 }
 
 function paper() {
-    projectCarousel.classList.add(PAPER);
+  //  projectCarousel.classList.add(PAPER);
 }
 
 function Back() {
     console.log("out")
-    projectCarousel.classList.remove(DDESK);
-    projectCarousel.classList.remove(PAPER);
+    // projectCarousel.classList.remove(DDESK);
+    // projectCarousel.classList.remove(PAPER);
 
-    projectCarousel.classList.add(BASIC);
+    // projectCarousel.classList.add(BASIC);
 
 }
 

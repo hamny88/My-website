@@ -8,6 +8,9 @@ const USERID = "user_wd5ncg0gvrV2MyTu3LMma",
     TEMPLATE_ID = "template_k991ov8"
     ;
 
+
+var emailRgx = /\w+@\w+.(\w+.\w+)/g;
+console.log(emailRgx.test('srd@gmail.com'))
 function getInfo() {
 
     let CS = new Object();
@@ -18,28 +21,51 @@ function getInfo() {
     return CS;
 }
 
+function validationCheck(str) {
+    console.log(str)
+    return emailRgx.test(str);
+}
+
 function Sendmail() {
     CS_info = getInfo();
-    console.log("mail")
+    console.log(validationCheck(CS_info.mail), CS_info.name)
 
-    var templateParams = {
-        name:  CS_info.name,
-        email :CS_info.mail,
-        content : CS_info.content
-    };
-     
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
-        .then(function(response) {
-           console.log('SUCCESS!', response.status, response.text);
-           swal({
-               title: "Success",
-               text : "Your email sent successfully!",
-               icon: "success"
-           });
-           
-        }, function(error) {
-           console.log('FAILED...', error);
+
+
+    if(validationCheck(CS_info.mail) && CS_info.name !== "" ){
+        var templateParams = {
+            name:  CS_info.name,
+            email :CS_info.mail,
+            content : CS_info.content
+        };
+         
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+            .then(function(response) {
+               console.log('SUCCESS!', response.status, response.text);
+               swal({
+                   title: "Success",
+                   text : "Your email sent successfully!",
+                   icon: "success"
+               });
+               
+            }, function(error) {
+               console.log('FAILED...', error);
+            });
+    } else if(CS_info.name == "") {
+        swal({
+            title : "Error",
+            text : "Please enter your name",
+            icon : "error"
         });
+    } else {
+        console.log(emailRgx.test(CS_info.mail))
+        swal({
+            title : "Error",
+            text : "Email address is not valid",
+            icon : "error"
+        });
+    }
+    
 
 }
 
