@@ -308,6 +308,11 @@ nameInput:focus::placeholder {
 
 }
 
+.main-linkedin {
+    color: var(--old-amber) !important;
+
+}
+
 @media screen and (max-width: 768px) {
     
     .navbar {
