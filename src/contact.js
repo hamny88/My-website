@@ -8,29 +8,22 @@ const USERID = "user_wd5ncg0gvrV2MyTu3LMma",
     TEMPLATE_ID = "template_k991ov8"
     ;
 
-
+let CS = new Object();
 var emailRgx = /\w+@\w+.(\w+.\w+)/g;
-console.log(emailRgx.test('srd@gmail.com'))
-function getInfo() {
 
-    let CS = new Object();
+function getInfo() {
     CS.name = input_name.value,
     CS.content = input_content.value,
     CS.mail = input_mail.value
-    
     return CS;
 }
 
 function validationCheck(str) {
-    console.log(str)
     return emailRgx.test(str);
 }
 
 function Sendmail() {
     CS_info = getInfo();
-    console.log(validationCheck(CS_info.mail), CS_info.name)
-
-
 
     if(validationCheck(CS_info.mail) && CS_info.name !== "" ){
         var templateParams = {
@@ -51,14 +44,14 @@ function Sendmail() {
             }, function(error) {
                console.log('FAILED...', error);
             });
+
     } else if(CS_info.name == "") {
         swal({
             title : "Error",
             text : "Please enter your name",
             icon : "error"
         });
-    } else {
-        console.log(emailRgx.test(CS_info.mail))
+    } else if(!validationCheck(CS_info.mail)) {
         swal({
             title : "Error",
             text : "Email address is not valid",
@@ -70,7 +63,6 @@ function Sendmail() {
 }
 
 function init() {
-    console.log(input_name, input_mail, input_content);
     emailjs.init(USERID);
 }
 

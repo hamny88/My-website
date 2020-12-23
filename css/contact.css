@@ -93,12 +93,15 @@
 input:focus::placeholder {
     color: transparent;
     transition: .5s ease;
+
 }
 
 .mail-input::placeholder {
     color: whitesmoke;
     font-size: 15px;
     font-family: '';
+    font-family: 'Orbitron', sans-serif;
+
 }
 
 .content-input::placeholder {
