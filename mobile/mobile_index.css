@@ -1,0 +1,364 @@
+:root {
+    --text-color:#f0f4f5;
+    --background-color:rgb(24, 24,24);
+    --nav-background-color : #263343;
+    --accent-color: #F4F3EF;
+    --old-green : #66FF66;
+    --old-amber : #FFCC00;
+}
+
+body {
+    /* cursor: none; */
+    margin : 0;
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--text-color); */
+}
+
+a { color: inherit; } 
+
+@keyframes fadeIn {
+    from{
+        opacity : 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;} 
+ } 
+
+
+
+.slick-vertical .slick-slide {
+    height: 100vh !important;
+}
+
+.slick-dots {
+    right: 0%;
+    top: 35% !important;
+    position: absolute;
+    width: 2% !important;
+    height: 10% !important;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-right: 35px !important;
+    flex-direction: column;
+    text-align: center;
+    display: flex !important;
+}
+
+.slick-dots li button:before {
+    color: white !important;
+}
+
+.name-form {
+    display: none;
+}
+
+.none {
+    display: none !important;
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+.showing {
+    display: flex !important;
+    animation: fadeIn 2s ease;
+}
+
+.name{
+    display: none;
+}
+
+.nameInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--old-green);
+    padding: 7px 0;
+    margin-top: 15px;
+    color: var(--old-green);
+    font-size:20px;
+    font-family: 'Jura', sans-serif;
+}
+
+.nameInput:focus { 
+    outline: none; 
+    color: var(--old-green);
+}
+
+.nameInput::placeholder {
+    color: var(--old-green);
+    opacity: 1; /* Firefox */
+}
+
+nameInput:focus::placeholder {
+    color: transparent;
+    transition: 0.5s;
+  }
+
+/* .slick-list {
+    height: 722.4px !important;
+} */
+/* .nonecursor{
+    cursor: none;
+}
+.cursor {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 3px solid #65e2d9;
+    transition: all 0.7s ease;
+}
+.bounce::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    position: absolute;
+    border: 5px solid hsla(176, 68%, 64%, 0.525);
+    animation: flow 1.4s ease infinite;
+} */
+
+.inactive {
+    margin-top: 40px;
+    width: 10px;
+    height: 10px;
+    transition: all 0.7s ease;
+}
+
+.first-carousel {
+    position: relative;
+    height: 100vh;
+}
+
+.advice-box {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 7%;
+}
+
+@keyframes flow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+        border-color: hsl(198, 60%, 50%);
+    }
+    100% {
+        transform : scale(1);
+
+    }
+}
+.NAYOUN {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 33px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items :center;
+    background-color : var(--nav-background-color);
+    padding : 8px 12px;
+
+}
+
+.navbar__logo {
+    font-size: 25px;
+    color : var(--text-color);
+}
+
+.navbar__logo i {
+    font-size: 35px;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.navbar__menu {
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding : 8px 30px;
+}
+
+.navbar__menu li:hover {
+    background-color: #b2bec3;
+    border-radius: 4px;
+}
+.navbar__icons {
+    /* display: flex;
+    list-style : none;
+    padding-left: 0;
+    justify-content: space-between;
+    align-items: center; */
+    position: absolute;
+    right: 2%;
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__icons i {
+    margin-left: 14px;
+    font-size: 20px;
+    color :var(--accent-color);
+}
+
+.navbar__icons li {
+    padding : 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+}
+
+
+.typed-cursor {
+    font-size : 20px;
+    color: var(--old-green);
+}
+
+.amber {
+    color: var(--old-amber);
+}
+
+#typed,#typed-name,#typed2 {
+    line-height: 128%;
+    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'Jura', sans-serif;
+
+    /* font-family: 'Bungee Outline', cursive; */
+    font-size: 24px;
+    line-height: 121%;
+    color : var(--old-green);
+}
+
+#typed2 {
+    color: var(--old-amber);
+}
+
+.print-name {
+    padding-top: 17px;
+}
+
+.type-box {
+    /* display: flex; */
+    align-items: center;
+    padding: 100px 0px 20px 74px; 
+    /* top right left bottom */
+}
+
+.advice{
+    color: var(--old-green);
+    font-family: 'Jura', sans-serif;
+
+}
+
+.icons {
+    font-size: 24px;
+    flex-direction: column;
+    display: flex;
+    padding-left: 74px;
+}
+
+.icon-link {
+    width: fit-content;
+}
+
+.icon-link:hover {
+    text-decoration: underline;
+    color: var(--old-amber);
+    text-underline-offset: 0.2em;
+    font-style: italic;
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+.icon__github, .icon__linkedin {
+    font-family: 'Jura', sans-serif;
+
+    /* font-family: 'Bungee Shade', cursive; */
+    color: var(--old-amber) !important;
+
+}
+
+.main-linkedin {
+    color: var(--old-amber) !important;
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+        /* align-items를 통해 반대되는 수직선을 만들어줌 */
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar__menu li {
+        width : 100%;
+        text-align:center;
+        /* width가 넓어지면 text는 자동으로 왼쪽으로 정렬되기 때문에 center로 지정해준다. */
+    }
+
+    .navbar__icons {
+        justify-content: center;
+        width: 100%;
+        display: none;
+        position: inherit;
+    }
+    .navbar__icons li {
+        margin-left: -17px;
+    }
+    /* position : absolute 는 원래 문서의 흐름에서 나와서 붙여주는 방식 */
+    .navbar__toggleBtn {
+        display : block;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+    }
+
+    .navbar__icons.active,
+    .navbar__menu.active {
+        display: flex;
+    }
+}
