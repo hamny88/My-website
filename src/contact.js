@@ -1,4 +1,4 @@
-const input_name = document.querySelector(".username"),
+const input_name = document.querySelector(".visitorname"),
     input_mail = document.querySelector(".email"),
     input_content = document.querySelector(".content")
     ;
@@ -40,7 +40,11 @@ function Sendmail() {
                    text : "Your email sent successfully!",
                    icon: "success"
                });
-               
+
+               input_content.value = "";
+               input_mail.value = "";
+               input_name.value = "";
+
             }, function(error) {
                console.log('FAILED...', error);
             });
@@ -61,6 +65,7 @@ function Sendmail() {
     
 
 }
+
 
 function init() {
     emailjs.init(USERID);
