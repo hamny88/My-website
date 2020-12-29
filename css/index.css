@@ -255,7 +255,10 @@ nameInput:focus::placeholder {
 
 #typed,#typed-name,#typed2 {
     line-height: 128%;
-    font-family: 'Bungee Outline', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'Jura', sans-serif;
+
+    /* font-family: 'Bungee Outline', cursive; */
     font-size: 24px;
     line-height: 121%;
     color : var(--old-green);
@@ -303,7 +306,9 @@ nameInput:focus::placeholder {
 }
 
 .icon__github, .icon__linkedin {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Jura', sans-serif;
+
+    /* font-family: 'Bungee Shade', cursive; */
     color: var(--old-amber) !important;
 
 }

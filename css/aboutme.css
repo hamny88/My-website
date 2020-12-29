@@ -40,14 +40,14 @@
 .story {
     color: white;
     display: block;
-    padding-top: 65px;
+    padding-top: 33px;
     justify-content: space-between;
     font-size: 26px;
 
 }
-
 .resume {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Bungee Shade', cursive; */
     color: var(--old-amber) !important;
 }
 .resume:hover {
@@ -65,15 +65,27 @@
 .memoji {
     position: relative;
     top: 7%;
-    width: auto !important;
-    height: auto !important;
+    width: 500px;
+    height: 400px;
     float: right;
     margin-right: 143px;
     /* margin-top: 78px; */
 }
 
-.typed3 {
-    /* color: var(--old-amber); */
-    /* font-family: 'Orbitron', sans-serif; */
+@media screen and (max-width: 1920px) {
+    .memoji {
+        margin-right: 30%;
+    }
+}
 
+/* mobile */
+@media ( min-width: 768px ) {
+    .memoji {
+        display: none;
+    }
+}
+@media ( min-width: 1024px ) {
+    .memoji {
+        display: none;
+    }
 }
