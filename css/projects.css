@@ -72,3 +72,10 @@ background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, F
 animation: fadeIn .7s linear;
 
 }
+
+.banner {
+    position: absolute;
+    left: 36%;
+    font-size: 36px;
+   color: white;
+}
