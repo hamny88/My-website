@@ -154,10 +154,10 @@ nameInput:focus::placeholder {
 }
 
 .advice-box {
-    position: absolute;
     text-align: center;
-    width: 100%;
+    width: 80%;
     bottom: 7%;
+    margin: 60px auto;
 }
 
 @keyframes flow {
@@ -273,10 +273,8 @@ nameInput:focus::placeholder {
 }
 
 .type-box {
-    /* display: flex; */
     align-items: center;
-    padding: 100px 0px 20px 74px; 
-    /* top right left bottom */
+    padding: 58px 0px 0px 15px;
 }
 
 .advice{
@@ -289,7 +287,8 @@ nameInput:focus::placeholder {
     font-size: 24px;
     flex-direction: column;
     display: flex;
-    padding-left: 74px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
 .icon-link {
