@@ -5,10 +5,10 @@
       <link rel=" shortcut icon" href="../image/favicon.ico">
       <link rel="icon" href="../image/favicon.ico">
       <link rel="stylesheet" href="../mobile/mobile_index.css">
-      <!-- <link rel="stylesheet" href="../css/aboutme.css">
-      <link rel="stylesheet" href="../css/skills.css">
-      <link rel="stylesheet" href="../css/projects.css">
-      <link rel="stylesheet" href="../css/contact.css"> -->
+      <link rel="stylesheet" href="../mobile/mobile_about.css">
+      <link rel="stylesheet" href="../mobile/mobile_skills.css">
+      <link rel="stylesheet" href="../mobile/mobile_projects.css">
+      <link rel="stylesheet" href="../mobile/mobile_contact.css">
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
@@ -100,14 +100,14 @@
   <script type="text/javascript">
 
     $(document).ready( function() {
-    $("#ABOUT-carousel").load("about-carousel.html");
-    $("#PROJECTS-carousel").load("projects-carousel.html");
-    $("#CONTACT-carousel").load("contact-carousel.html");
+    $("#ABOUT-carousel").load("mobile_about-carousel.html");
+    $("#PROJECTS-carousel").load("mobile_projects-carousel.html");
+    $("#CONTACT-carousel").load("mobile_contact-carousel.html");
     });
 
     $(window).load(function(){
       $.getScript( "../src/main.js" )
-      $.getScript( "../src/AboutMe.js" )
+      $.getScript( "../src/mobile_AboutMe.js" )
       $.getScript( "../src/projects.js" )
       $.getScript( "../src/contact.js" )
     });

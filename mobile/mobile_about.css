@@ -1,0 +1,79 @@
+.about-container {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    padding-top: 45px;
+    padding-left: 20px;
+}
+
+/* .left-panel {
+    width: 50%;
+} */
+
+.right-panel {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.right-panel img{
+    vertical-align: middle;
+    margin-top: 40px;
+}
+
+.intro-sentence {
+    font-size: 31px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    height: 12%;
+}
+
+.code-the-dream, 
+.build-the-dream {
+    display: block;
+}
+
+.introduce {
+    font-size: 18px;
+    width: 110%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+.introduce-1 {
+    font-size: 18px;
+    width: 87%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+
+.story {
+    color: white;
+    display: block;
+    padding-top: 15px;
+    justify-content: space-between;
+    font-size: 26px;
+
+}
+.resume {
+    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Bungee Shade', cursive; */
+    color: var(--old-amber) !important;
+}
+.resume:hover {
+    text-decoration: underline;
+    color: var(--old-amber);
+    text-underline-offset: 0.2em;
+    font-style: italic;
+    -webkit-tap-highlight-color: transparent;
+
+}
+.fa-linkedin {
+    color: #0a66c2;
+}
+
+.memoji {
+    width: 200px;
+    height: 200px;
+
+}

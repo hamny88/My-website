@@ -64,22 +64,6 @@ function greeting() {
 
 }
 
-// function moveMouse(e) {
-//     console.log("movemouse")
-//     const x = e.clientX;
-//     const y = e.clientY;
-//     cursor.style.transform = `translate(${x - 15}px, ${y - 15}px)`;
-// }
-// function disableAnimation() {
-//     const hasBounceClass = cursor.classList.contains(bounce);
-//     if(hasBounceClass) {
-//         cursor.classList.add(inactive);
-//         cursor.classList.remove(bounce);
-//     } else {
-//         cursor.classList.add(bounce);
-//         cursor.classList.reomove(inactive);
-//     }
-// }
 
 function slick() {
     const slider = $(".vertical-slider");
